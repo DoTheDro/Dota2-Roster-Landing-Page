@@ -1,0 +1,147 @@
+html, body {
+    height: 100%;
+}
+
+.outer-con {
+    height: inherit;
+    background:url(images/Hero-section-img.jpg) rgba(0, 0, 0, 0.5);
+    background-blend-mode: multiply;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+.overlay {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.custom-container {
+    height: inherit;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    transition: display 2s;
+}
+
+h1, h2, p, button {
+    font-family: 'Darker Grotesque', sans-serif !important;
+    color: #FFF;
+}
+
+.custom-container h1 {
+    font-size: 5.7em;
+    font-weight: 700;
+    text-align: center;
+}
+
+.custom-container p {
+    font-size: 1.7em;
+    font-weight: 500;
+    margin: .8em 0;
+    text-align: center;
+}
+
+.signup-btn {
+    margin-top: .4em;
+    font-size: 1.9em;
+    font-weight: 500;
+    background: #008FBB;
+    border: none;
+    width: 400px;
+    height: 64px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 45px;
+    padding: 15px;
+}
+
+.form-con {
+    position: absolute;
+    top: 25vh;
+    left: 35vw;
+    display: none;
+}
+
+.player-form {
+    border: 3px solid #008FBB;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 530px;
+    height: 510px;
+    padding: 40px;
+}
+
+.form-con input {
+    border-radius: 5px;
+    border: none;
+    margin-bottom: 28px;
+    height: 40px;
+    width: 420px;
+}
+
+.form-con input::placeholder {
+    padding-left: 5px;
+    color: #616161;
+}
+
+.form-con .submit-btn {
+    font-size: 1.2em;
+    font-weight: 500;
+    background-color: #008FBB;
+    border: none;
+    width: 270px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    padding: 15px;
+}
+
+h2.submitted {
+    font-size: 2.3em;
+}
+
+@media only screen and (min-width: 1024px) {
+    .form-con {
+        width: 500px;
+    }
+}
+
+@media only screen and (max-width: 1024px) {
+    .custom-container h1 {
+        font-size: 4.4em;
+    }
+
+    .custom-container p {
+        font-size: 1.5em;
+    }
+
+    .signup-btn {
+        width: 350px;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    div.custom-container {
+        padding: 25px;
+    }
+    .custom-container h1 {
+        font-size: 3.4em;
+    }
+
+    .custom-container p {
+        font-size: 1.4em;
+        line-height: 1.8em;
+    }
+
+    .signup-btn {
+        width: 240px;
+        font-size: 1.4em;
+    }
+}
