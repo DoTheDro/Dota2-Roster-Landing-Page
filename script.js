@@ -11,6 +11,7 @@ signUpBtn.addEventListener('click', (e) => {
     console.log('Button Clicked!');
     customContainer.style.display = "none";
     formCon.style.display = "block";
+    outerCon.setAttribute('id', 'show-form')
 })
 
 submitBtn.addEventListener('click', (e) => {

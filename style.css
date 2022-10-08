@@ -57,11 +57,10 @@ h1, h2, p, button {
     padding: 15px;
 }
 
-.form-con {
-    position: absolute;
-    top: 25vh;
-    left: 35vw;
-    display: none;
+#show-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .player-form {
@@ -71,9 +70,11 @@ h1, h2, p, button {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 530px;
-    height: 510px;
     padding: 40px;
+}
+
+.form-con {
+    display: none;
 }
 
 .form-con input {
@@ -81,7 +82,7 @@ h1, h2, p, button {
     border: none;
     margin-bottom: 28px;
     height: 40px;
-    width: 420px;
+    width: 100%;
 }
 
 .form-con input::placeholder {
@@ -94,7 +95,8 @@ h1, h2, p, button {
     font-weight: 500;
     background-color: #008FBB;
     border: none;
-    width: 270px;
+    max-width: 270px;
+    width: 100%;
     height: 60px;
     display: flex;
     justify-content: center;
@@ -114,6 +116,10 @@ h2.submitted {
 }
 
 @media only screen and (max-width: 1024px) {
+    .form-con {
+        max-width: 500px;
+        width: 90%;
+    }
     .custom-container h1 {
         font-size: 4.4em;
     }
@@ -128,9 +134,18 @@ h2.submitted {
 }
 
 @media only screen and (max-width: 767px) {
-    div.custom-container {
+    .player-form {
         padding: 25px;
     }
+
+    .form-con input::placeholder {
+         text-align: center;
+    }
+
+    div.custom-container {
+        padding: 15px;
+    }
+
     .custom-container h1 {
         font-size: 3.4em;
     }
